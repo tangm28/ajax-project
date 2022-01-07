@@ -22,9 +22,9 @@
         <p>What is your <u><strong>1 rep max</strong></u> for the following exercises? (If you’re not sure, that’s okay. Use
           this <a href="">calculator</a>!)</p>
       </div>
-      <div class="row justify-center">
-        <div class="row justify-center column-full">
-          <div class="row max-container justify-between">
+      <form id="data-maxes" class="row justify-center">
+        <div class="row max-section-container justify-center column-full">
+          <div class="row max-section justify-between align-baseline">
             <span>Bench:</span>
             <input type="text" id="bench-max" class="">
             <select id="bench-meas-type">
@@ -33,8 +33,8 @@
             </select>
           </div>
         </div>
-        <div class="row justify-center column-full">
-          <div class="row max-container justify-between">
+        <div class="row max-section-container justify-center column-full">
+          <div class="row max-section justify-between align-baseline">
             <span>Squat:</span>
             <input type="text" id="squat-max" class="">
             <select id="squat-meas-type">
@@ -43,8 +43,8 @@
             </select>
           </div>
         </div>
-        <div class="row justify-center column-full">
-          <div class="row max-container justify-between">
+        <div class="row max-section-container justify-center column-full">
+          <div class="row max-section justify-between align-baseline">
             <span>Deadlift:</span>
             <input type="text" id="deadlift-max" class="">
             <select id="deadlift-meas-type">
@@ -53,8 +53,8 @@
             </select>
           </div>
         </div>
-        <div class="row justify-center column-full">
-          <div class="row max-container justify-between">
+        <div class="row max-section-container justify-center column-full">
+          <div class="row max-section justify-between align-baseline">
             <span>Overhead Press:</span>
             <input type="text" id="ohp-max" class="">
             <select id="ohp-meas-type">
@@ -63,7 +63,8 @@
             </select>
           </div>
         </div>
-      </div>
+        <button id="maxes-save-button">Save</button>
+      </form>
     </div>
   </main>
   <script src="js/data.js"></script>

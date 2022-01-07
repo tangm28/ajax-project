@@ -1,10 +1,10 @@
 header {
   background-color: #343a40;
-  padding: 19px 0;
+  padding: 17px 0;
   color: white;
 }
 
-header > span {
+header span {
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -12,40 +12,47 @@ header > span {
 
 p {
   line-height: 1.3;
+  font-size: 18px;
+}
+
+#data-maxes {
+  margin: 14px 0;
 }
 
 #workout-maxes-title {
   margin: 24px auto;
 }
 
-.max-container {
+.max-section-container {
+  padding: 10px 0;
+}
+
+.max-section {
   width: 270px;
 }
 
-.max-container > span {
+.max-section > span {
   width: 115px;
+  font-weight: bold;
 }
 
-.max-container > input {
+.max-section > input {
   width: 100px;
+  height: 30px;
 }
 
-.max-container > select {
+.max-section > select {
   width: 40px;
+  height: 30px;
 }
 
-.align-baseline {
-  align-items: baseline;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.justify-between {
-  justify-content: space-between;
+#maxes-save-button {
+  line-height: 24px;
+  border-radius: 4px;
+  background-color: #10a403;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  font-size: 16px;
+  margin-top: 24px;
 }
