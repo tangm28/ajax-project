@@ -23,7 +23,8 @@ select {
 }
 
 input:focus,
-select:focus {
+select:focus,
+button:focus {
   outline: none !important;
   border: 2px solid #10a403;
 }
