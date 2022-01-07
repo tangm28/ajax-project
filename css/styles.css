@@ -70,8 +70,9 @@ select:focus {
   margin-top: 24px;
 }
 
-.modal {
-  display: block;
+#calc-modal,
+#max-result-modal {
+  display: none;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -95,7 +96,14 @@ select:focus {
 }
 
 .modal-content > h3 {
+  text-align: center;
   margin-top: 5px;
+}
+
+.modal-content > p {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 25px 15px;
 }
 
 .fa-times {
@@ -131,7 +139,8 @@ select:focus {
   height: 30px;
 }
 
-#calculate-button {
+#calculate-button,
+.exit-modal {
   background: #10a403;
   border-radius: 50px;
   font-weight: bold;
