@@ -11,8 +11,60 @@
 </head>
 <body>
   <header>
+    <div class="row container justify-center">
+      <span>Workout Journal</span>
+    </div>
   </header>
   <main>
+    <div class="container">
+      <h2 id="workout-maxes-title" class="text-center">Let's Get Started!</h2>
+      <div id="start-page-description">
+        <p>What is your <u><strong>1 rep max</strong></u> for the following exercises? (If you’re not sure, that’s okay. Use
+          this <a href="">calculator</a>!)</p>
+      </div>
+      <div class="row justify-center">
+        <div class="row justify-center column-full">
+          <div class="row max-container justify-between">
+            <span>Bench:</span>
+            <input type="text" id="bench-max" class="">
+            <select id="bench-meas-type">
+              <option value="lb">lb</option>
+              <option value="kg">kg</option>
+            </select>
+          </div>
+        </div>
+        <div class="row justify-center column-full">
+          <div class="row max-container justify-between">
+            <span>Squat:</span>
+            <input type="text" id="squat-max" class="">
+            <select id="squat-meas-type">
+              <option value="lb">lb</option>
+              <option value="kg">kg</option>
+            </select>
+          </div>
+        </div>
+        <div class="row justify-center column-full">
+          <div class="row max-container justify-between">
+            <span>Deadlift:</span>
+            <input type="text" id="deadlift-max" class="">
+            <select id="deadlift-meas-type">
+              <option value="lb">lb</option>
+              <option value="kg">kg</option>
+            </select>
+          </div>
+        </div>
+        <div class="row justify-center column-full">
+          <div class="row max-container justify-between">
+            <span>Overhead Press:</span>
+            <input type="text" id="ohp-max" class="">
+            <select id="ohp-meas-type">
+              <option value="lb">lb</option>
+              <option value="kg">kg</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>

@@ -1,0 +1,51 @@
+header {
+  background-color: #343a40;
+  padding: 19px 0;
+  color: white;
+}
+
+header > span {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+p {
+  line-height: 1.3;
+}
+
+#workout-maxes-title {
+  margin: 24px auto;
+}
+
+.max-container {
+  width: 270px;
+}
+
+.max-container > span {
+  width: 115px;
+}
+
+.max-container > input {
+  width: 100px;
+}
+
+.max-container > select {
+  width: 40px;
+}
+
+.align-baseline {
+  align-items: baseline;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
