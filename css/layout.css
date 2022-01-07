@@ -30,12 +30,16 @@
   justify-content: center;
 }
 
+.justify-between {
+  justify-content: space-between;
+}
+
 .text-center {
   text-align: center;
 }
 
-.justify-between {
-  justify-content: space-between;
+.text-right {
+  text-align: right;
 }
 
 @media screen and (min-width: 768px) {
