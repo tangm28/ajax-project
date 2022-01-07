@@ -26,7 +26,7 @@
       <h2 id="workout-maxes-title" class="text-center">Let's Get Started!</h2>
       <div id="start-page-description">
         <p>What is your <u><strong>1 rep max</strong></u> for the following exercises? (If you’re not sure, that’s okay. Use
-          this <a href="">calculator</a>!)</p>
+          this <a href="#" id="open-calc">calculator</a>!)</p>
       </div>
       <form id="data-maxes" class="row justify-center">
         <div class="row max-section-container justify-center column-full">
@@ -81,23 +81,23 @@
             <div class="section-header">
               <span>Weight:</span>
             </div>
-            <input type="text" id="calc-weight" class="">
-            <select id="calc-meas-type">
+            <input type="text" name="calc-weight" id="calc-weight" class="" required>
+            <select name="weight-meas-type" id="weight-meas-type">
               <option value="lb">lb</option>
               <option value="kg">kg</option>
             </select>
           </div>
           <div class="row calc-section align-baseline">
             <div class="section-header">
-              <span>Rep:</span>
+              <span>Reps:</span>
             </div>
-            <input type="text" id="calc-rep" class="">
+            <input type="text" name="calc-rep" id="calc-rep" class="" required>
           </div>
           <button id="calculate-button">Calculate</button>
         </form>
       </div>
     </div>
-    <div id="max-result-modal" class="modal">
+    <div id="max-result-modal" class="">
       <div class="modal-content">
         <i class="fas fa-times"></i>
         <p>Your approximate 1 rep max is:</p>
