@@ -155,3 +155,23 @@ button:focus {
   font-size: 16px;
   margin-top: 15px;
 }
+
+.maxes-card {
+  width: 70px;
+  border: 1px solid #afafaf;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border-top: none;
+}
+
+.maxes-card button,
+.test {
+  background: #10a403;
+  border: 1px solid #afafaf;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-size: 13px;
+  padding: 5.5px 15.57px;
+  border-right: none;
+  border-left: none;
+}
