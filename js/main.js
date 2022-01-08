@@ -57,6 +57,7 @@ function calculateMax(event) {
   }
   $maxResult.textContent = max - (max % 5) + formData.get('weight-meas-type');
   closeModal(event);
+  $calcMaxForm.reset();
   openModal($maxResultModal);
 }
 
@@ -112,6 +113,7 @@ function saveMaxes(event) {
   };
   maxes.nextTrendId++;
   maxes.maxesTrend.unshift(currentMaxes);
+  $dataMaxes.reset();
 }
 
 $maxCalculator.addEventListener('click', openModal);
