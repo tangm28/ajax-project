@@ -1,6 +1,10 @@
+body {
+  font-family: Roboto, sans-serif;
+}
+
 header {
   background-color: #343a40;
-  padding: 17px 0;
+  padding: 16px 0;
   color: white;
 }
 
@@ -46,7 +50,7 @@ button:focus {
 }
 
 .max-section > span {
-  width: 115px;
+  width: 120px;
   font-weight: bold;
 }
 
@@ -141,7 +145,7 @@ button:focus {
 }
 
 #calculate-button,
-.exit-modal {
+#exit-calc-result {
   background: #10a403;
   border-radius: 50px;
   font-weight: bold;
