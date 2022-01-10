@@ -211,3 +211,18 @@ button:focus {
 .maxes-card span {
   padding: 16.8px 0;
 }
+
+.explore-container,
+.measurement-container {
+  border: 1px solid #afafaf;
+  box-sizing: border-box;
+  border-radius: 8px;
+  max-width: 49.5%;
+  width: 100%;
+  padding: 30.6px 20px;
+}
+
+.explore-container h5,
+.measurement-container h5 {
+  font-size: 16px;
+}

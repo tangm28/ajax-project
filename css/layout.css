@@ -15,9 +15,14 @@
 }
 
 .maxes-container {
-  max-width: 320px;
   margin: 0 auto;
   padding: 0 0.25rem;
+}
+
+.card-container {
+  max-width: 320px;
+  padding: 0.5rem 0;
+  margin: 0 auto;
 }
 
 #maxes-card-container {
@@ -46,6 +51,10 @@
   align-items: baseline;
 }
 
+.align-center {
+  align-items: center;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -67,6 +76,10 @@
     max-width: 375px;
     margin: 0 auto;
     padding: 0 0.25rem;
+  }
+
+  .card-container {
+    max-width: 375px;
   }
 }
 
