@@ -11,13 +11,17 @@
 .main-container {
   max-width: 575px;
   margin: 0 auto;
-  padding: 0.75rem;
+  padding: 0.5rem 0.25rem;
 }
 
 .maxes-container {
   max-width: 320px;
   margin: 0 auto;
-  padding: 0 5px;
+  padding: 0 0.25rem;
+}
+
+#maxes-card-container {
+  max-width: 100%;
 }
 
 .row {
@@ -28,6 +32,10 @@
 .column-full,
 .column-half {
   width: 100%;
+}
+
+.column-quarter {
+  width: calc(70 / 302);
 }
 
 .column-40 {
@@ -52,6 +60,14 @@
 
 .text-right {
   text-align: right;
+}
+
+@media screen and (min-width: 375px) {
+  .maxes-container {
+    max-width: 375px;
+    margin: 0 auto;
+    padding: 0 0.25rem;
+  }
 }
 
 @media screen and (min-width: 768px) {

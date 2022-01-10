@@ -163,10 +163,12 @@ button:focus {
 
 .maxes-container h5 {
   margin: 0.5rem auto;
+  padding-left: 16px;
+  font-size: 16px;
 }
 
 .maxes-card {
-  width: 70px;
+  flex-basis: 24%;
   border: 1px solid #afafaf;
   box-sizing: border-box;
   border-radius: 8px;
@@ -184,10 +186,9 @@ button:focus {
   border-radius: 8px;
   font-size: 13px;
   color: white;
-  padding: 5.5px 0;
-  width: 75px;
+  padding: 7.4px 0;
 }
 
 .maxes-card span {
-  padding: 10.8px 0;
+  padding: 16.8px 0;
 }
