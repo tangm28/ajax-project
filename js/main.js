@@ -23,6 +23,10 @@ var $maxesTitle = document.getElementById('workout-maxes-title');
 var $maxesDescription = document.getElementById('start-page-description');
 var $barMenu = document.getElementById('bar-menu');
 var $backArrow = document.getElementById('back-arrow');
+var $maxBenchCard = document.getElementById('max-bench-card');
+var $maxSquatCard = document.getElementById('max-squat-card');
+var $maxDeadliftCard = document.getElementById('max-deadlift-card');
+var $maxOhpCard = document.getElementById('max-ohp-card');
 
 function openModal(event) {
   var temp = null;
@@ -124,11 +128,8 @@ function saveMaxes(event) {
   };
   maxes.nextTrendId++;
   maxes.maxesTrend.unshift(currentMaxes);
-  $dataMaxes.reset();
+  updateMaxCards();
   goToMain();
-  // $mainPage.setAttribute('class', 'main-container');
-  // $maxesPage.setAttribute('class', 'container hidden');
-  // $barMenu.setAttribute('class', 'fas fa-bars');
 }
 
 function goToMain(event) {
@@ -155,6 +156,13 @@ function goToMaxes(event) {
   $ohpMeas.value = maxes.maxesTrend[0].ohpMeas;
 }
 
+function updateMaxCards() {
+  $maxBenchCard.textContent = maxes.maxesTrend[0].maxBench;
+  $maxSquatCard.textContent = maxes.maxesTrend[0].maxSquat;
+  $maxDeadliftCard.textContent = maxes.maxesTrend[0].maxDeadlift;
+  $maxOhpCard.textContent = maxes.maxesTrend[0].maxOHP;
+}
+
 $maxCalculator.addEventListener('click', openModal);
 $closeCalc.addEventListener('click', closeModal);
 $calcMaxForm.addEventListener('submit', calculateMax);
@@ -163,3 +171,4 @@ $exitCalcResult.addEventListener('click', closeModal);
 $dataMaxes.addEventListener('submit', saveMaxes);
 $maxesEditIcon.addEventListener('click', goToMaxes);
 $backArrow.addEventListener('click', goToMain);
+window.addEventListener('load', updateMaxCards);
