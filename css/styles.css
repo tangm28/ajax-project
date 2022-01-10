@@ -156,6 +156,15 @@ button:focus {
   margin-top: 15px;
 }
 
+.maxes-container {
+  border: 1px solid #afafaf;
+  border-radius: 8px;
+}
+
+.maxes-container h5 {
+  margin: 0.5rem auto;
+}
+
 .maxes-card {
   width: 70px;
   border: 1px solid #afafaf;
@@ -164,14 +173,21 @@ button:focus {
   border-top: none;
 }
 
-.maxes-card button,
-.test {
+#maxes-card-container {
+  margin: 0.25rem auto;
+}
+
+.maxes-card button {
   background: #10a403;
-  border: 1px solid #afafaf;
+  border: 1px solid #10a403;
   box-sizing: border-box;
   border-radius: 8px;
   font-size: 13px;
-  padding: 5.5px 15.57px;
-  border-right: none;
-  border-left: none;
+  color: white;
+  padding: 5.5px 0;
+  width: 75px;
+}
+
+.maxes-card span {
+  padding: 10.8px 0;
 }
