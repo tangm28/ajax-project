@@ -27,6 +27,7 @@ var $maxBenchCard = document.getElementById('max-bench-card');
 var $maxSquatCard = document.getElementById('max-squat-card');
 var $maxDeadliftCard = document.getElementById('max-deadlift-card');
 var $maxOhpCard = document.getElementById('max-ohp-card');
+var $maxSaveButton = document.getElementById('maxes-save-button');
 
 function openModal(event) {
   var temp = null;
@@ -154,6 +155,7 @@ function goToMaxes(event) {
   $squatMeas.value = maxes.maxesTrend[0].squatMeas;
   $deadliftMeas.value = maxes.maxesTrend[0].deadliftMeas;
   $ohpMeas.value = maxes.maxesTrend[0].ohpMeas;
+  $maxSaveButton.textContent = 'Update';
 }
 
 function updateMaxCards() {
