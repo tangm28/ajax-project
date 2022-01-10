@@ -21,6 +21,8 @@ var $maxesPage = document.getElementById('maxes-page');
 var $maxesEditIcon = document.getElementById('maxes-edit');
 var $maxesTitle = document.getElementById('workout-maxes-title');
 var $maxesDescription = document.getElementById('start-page-description');
+var $barMenu = document.getElementById('bar-menu');
+var $backArrow = document.getElementById('back-arrow');
 
 function openModal(event) {
   var temp = null;
@@ -123,13 +125,24 @@ function saveMaxes(event) {
   maxes.nextTrendId++;
   maxes.maxesTrend.unshift(currentMaxes);
   $dataMaxes.reset();
-  $mainPage.setAttribute('class', 'main-container');
+  goToMain();
+  // $mainPage.setAttribute('class', 'main-container');
+  // $maxesPage.setAttribute('class', 'container hidden');
+  // $barMenu.setAttribute('class', 'fas fa-bars');
+}
+
+function goToMain(event) {
   $maxesPage.setAttribute('class', 'container hidden');
+  $mainPage.setAttribute('class', 'main-container');
+  $backArrow.setAttribute('class', 'fas fa-arrow-left hidden');
+  $barMenu.setAttribute('class', 'fas fa-bars');
 }
 
 function goToMaxes(event) {
   $mainPage.setAttribute('class', 'main-container hidden');
   $maxesPage.setAttribute('class', 'container');
+  $barMenu.setAttribute('class', 'fas fa-bars hidden');
+  $backArrow.setAttribute('class', 'fas fa-arrow-left');
   $maxesTitle.textContent = 'Current Training Maxes';
   $maxesDescription.setAttribute('class', 'hidden');
   $benchMax.value = maxes.maxesTrend[0].maxBench;
@@ -149,3 +162,4 @@ $closeCalcResult.addEventListener('click', closeModal);
 $exitCalcResult.addEventListener('click', closeModal);
 $dataMaxes.addEventListener('submit', saveMaxes);
 $maxesEditIcon.addEventListener('click', goToMaxes);
+$backArrow.addEventListener('click', goToMain);
