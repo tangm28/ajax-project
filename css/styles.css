@@ -8,10 +8,25 @@ header {
   color: white;
 }
 
-header span {
+#bar-menu,
+#back-arrow {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 4.5px 14.07px;
+  font-size: 25px;
+}
+
+#back-arrow {
+  border: 2px solid #343a40;
+}
+
+header h4 {
+  margin: 0.5rem auto;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
+  padding-right: 54px;
 }
 
 p {
@@ -154,4 +169,60 @@ button:focus {
   padding: 10px 32.5px;
   font-size: 16px;
   margin-top: 15px;
+}
+
+.maxes-container {
+  border: 1px solid #afafaf;
+  border-radius: 8px;
+}
+
+.maxes-container h5 {
+  margin: 0.5rem auto;
+  padding-left: 12px;
+  font-size: 16px;
+}
+
+.maxes-container i {
+  font-size: 12px;
+}
+
+.maxes-card {
+  flex-basis: 24%;
+  border: 1px solid #afafaf;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border-top: none;
+}
+
+#maxes-card-container {
+  margin: 0.25rem auto;
+}
+
+.maxes-card button {
+  background: #10a403;
+  border: 1px solid #10a403;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-size: 13px;
+  color: white;
+  padding: 7.4px 0;
+}
+
+.maxes-card span {
+  padding: 16.8px 0;
+}
+
+.explore-container,
+.measurement-container {
+  border: 1px solid #afafaf;
+  box-sizing: border-box;
+  border-radius: 8px;
+  max-width: 49.5%;
+  width: 100%;
+  padding: 30.6px 20px;
+}
+
+.explore-container h5,
+.measurement-container h5 {
+  font-size: 16px;
 }

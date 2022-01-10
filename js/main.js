@@ -1,8 +1,12 @@
 /* global maxes */
-// var $benchMax = document.getElementById('bench-max');
-// var $squatMax = document.getElementById('squat-max');
-// var $deadliftMax = document.getElementById('deadlift-max');
-// var $ohpMax = document.getElementById('ohp-max');
+var $benchMax = document.getElementById('bench-max');
+var $squatMax = document.getElementById('squat-max');
+var $deadliftMax = document.getElementById('deadlift-max');
+var $ohpMax = document.getElementById('ohp-max');
+var $benchMeas = document.getElementById('bench-meas-type');
+var $squatMeas = document.getElementById('squat-meas-type');
+var $deadliftMeas = document.getElementById('deadlift-meas-type');
+var $ohpMeas = document.getElementById('ohp-meas-type');
 var $maxCalculator = document.getElementById('open-calc');
 var $calcModal = document.getElementById('calc-modal');
 var $closeCalc = document.getElementById('close-calc');
@@ -12,6 +16,18 @@ var $maxResultModal = document.getElementById('max-result-modal');
 var $closeCalcResult = document.getElementById('close-calc-result');
 var $exitCalcResult = document.getElementById('exit-calc-result');
 var $dataMaxes = document.getElementById('data-maxes');
+var $mainPage = document.getElementById('main-page');
+var $maxesPage = document.getElementById('maxes-page');
+var $maxesEditIcon = document.getElementById('maxes-edit');
+var $maxesTitle = document.getElementById('workout-maxes-title');
+var $maxesDescription = document.getElementById('start-page-description');
+var $barMenu = document.getElementById('bar-menu');
+var $backArrow = document.getElementById('back-arrow');
+var $maxBenchCard = document.getElementById('max-bench-card');
+var $maxSquatCard = document.getElementById('max-squat-card');
+var $maxDeadliftCard = document.getElementById('max-deadlift-card');
+var $maxOhpCard = document.getElementById('max-ohp-card');
+var $maxSaveButton = document.getElementById('maxes-save-button');
 
 function openModal(event) {
   var temp = null;
@@ -113,7 +129,40 @@ function saveMaxes(event) {
   };
   maxes.nextTrendId++;
   maxes.maxesTrend.unshift(currentMaxes);
-  $dataMaxes.reset();
+  updateMaxCards();
+  goToMain();
+}
+
+function goToMain(event) {
+  $maxesPage.setAttribute('class', 'container hidden');
+  $mainPage.setAttribute('class', 'main-container');
+  $backArrow.setAttribute('class', 'fas fa-arrow-left hidden');
+  $barMenu.setAttribute('class', 'fas fa-bars');
+}
+
+function goToMaxes(event) {
+  $mainPage.setAttribute('class', 'main-container hidden');
+  $maxesPage.setAttribute('class', 'container');
+  $barMenu.setAttribute('class', 'fas fa-bars hidden');
+  $backArrow.setAttribute('class', 'fas fa-arrow-left');
+  $maxesTitle.textContent = 'Current Training Maxes';
+  $maxesDescription.setAttribute('class', 'hidden');
+  $benchMax.value = maxes.maxesTrend[0].maxBench;
+  $squatMax.value = maxes.maxesTrend[0].maxSquat;
+  $deadliftMax.value = maxes.maxesTrend[0].maxDeadlift;
+  $ohpMax.value = maxes.maxesTrend[0].maxOHP;
+  $benchMeas.value = maxes.maxesTrend[0].benchMeas;
+  $squatMeas.value = maxes.maxesTrend[0].squatMeas;
+  $deadliftMeas.value = maxes.maxesTrend[0].deadliftMeas;
+  $ohpMeas.value = maxes.maxesTrend[0].ohpMeas;
+  $maxSaveButton.textContent = 'Update';
+}
+
+function updateMaxCards() {
+  $maxBenchCard.textContent = maxes.maxesTrend[0].maxBench;
+  $maxSquatCard.textContent = maxes.maxesTrend[0].maxSquat;
+  $maxDeadliftCard.textContent = maxes.maxesTrend[0].maxDeadlift;
+  $maxOhpCard.textContent = maxes.maxesTrend[0].maxOHP;
 }
 
 $maxCalculator.addEventListener('click', openModal);
@@ -122,3 +171,6 @@ $calcMaxForm.addEventListener('submit', calculateMax);
 $closeCalcResult.addEventListener('click', closeModal);
 $exitCalcResult.addEventListener('click', closeModal);
 $dataMaxes.addEventListener('submit', saveMaxes);
+$maxesEditIcon.addEventListener('click', goToMaxes);
+$backArrow.addEventListener('click', goToMain);
+window.addEventListener('load', updateMaxCards);
