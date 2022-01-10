@@ -163,8 +163,12 @@ button:focus {
 
 .maxes-container h5 {
   margin: 0.5rem auto;
-  padding-left: 16px;
+  padding-left: 12px;
   font-size: 16px;
+}
+
+.maxes-container i {
+  font-size: 12px;
 }
 
 .maxes-card {
